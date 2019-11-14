@@ -1,3 +1,4 @@
+  
 pipeline {
   agent any
   stages {
@@ -25,8 +26,8 @@ pipeline {
     }
     stage("Email build status") {
       steps {
-        mail body: "${env.JOB_NAME} - Build#${env.BUILD_NUMBER} - ${currentBuild.currentResult} \n\n Check console output at ${env.BUILD_URL} to view results",  bcc: '', body: 'JenkinsSampleBody', cc: '', from: '', replyTo: '', subject: 'JenkinsSampleSubject', to: 'anca.lupu03@gmail.com', subject: 'JenkinsSampleSubject', to: 'anca.lupu03@gmail.com'
+        mail body: "${env.JOB_NAME} - Build#${env.BUILD_NUMBER} - ${currentBuild.currentResult} \n\n Check console output at ${env.BUILD_URL} to view results",  bcc: '', cc: '', from: '', replyTo: '', subject: 'JenkinsSampleSubject', to: 'anca.lupu03@gmail.com'
       }
-  }
-}
+	}
+	}
 }
